@@ -1,0 +1,45 @@
+{
+    "binance": {
+        "base_url": "https://fapi.binance.com",
+        "ws_url": "wss://fstream.binance.com/ws",
+        "api_key": "",
+        "api_secret": "",
+        "rate_limit": 1200
+    },
+    "scanning": {
+        "interval_seconds": 60,
+        "symbols": [],
+        "exclude_symbols": [],
+        "min_24h_volume_usdt": 10000000,
+        "max_symbols": 2000
+    },
+    "scoring": {
+        "volume_weight": 40,
+        "price_weight": 25,
+        "oi_weight": 20,
+        "funding_weight": 10,
+        "liquidity_weight": 5,
+        "alert_threshold": 62,
+        "critical_threshold": 70
+    },
+    "cooldown_minutes": 30,
+    "telegram": {
+        "bot_token": "YOUR_BOT_TOKEN",
+        "chat_id": "YOUR_CHAT_ID",
+        "thread_id": null,
+        "enabled": true
+    },
+    "database": {
+        "path": "data/yaobi.db",
+        "retention_days": 7
+    },
+    "websocket": {
+        "enabled": true,
+        "reconnect_delay": 5,
+        "ping_interval": 30
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "logs/yaobi.log"
+    }
+}
